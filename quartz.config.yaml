@@ -133,6 +133,9 @@ plugins:
     enabled: true
   - source: github:quartz-community/folder-page
     enabled: true
+    options:
+      # 폴더 페이지 기능을 활성화하기 위해 아래와 같이 기본값을 확인해 보세요
+      prettyTitles: true
   - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
