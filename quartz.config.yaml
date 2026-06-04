@@ -201,10 +201,10 @@ plugins:
     options:
       provider: giscus
       options:
-        repo: TODO:username/repo-name
-        repoId: TODO:your-repo-id
+        repo: BoraHong/blog
+        repoId: R_kgDOSwr-Og
         category: Announcements
-        categoryId: TODO:your-category-id
+        categoryId: DIC_kwDOSwr-Os4C-e80
         mapping: url
         strict: true
         reactionsEnabled: true
