@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: BoraHong
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -230,9 +230,9 @@ plugins:
       title: Recent Notes
       limit: 5
       linkToMore: false
-      showTags: true
+      showTags: false
     layout:
-      position: left
+      position: right
       priority: 25
   - source: github:quartz-community/spacer
     enabled: true
