@@ -10,7 +10,7 @@ permissions:
   pages: write
   id-token: write
 env:
-  THEME_NAME: aaaa
+  THEME_NAME: dark-clarity
  
 concurrency:
   group: "pages"
