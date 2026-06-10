@@ -1,0 +1,5 @@
+{
+  "folder": "content/Diary",
+  "template": "templater/육아일기",
+  "format": "YYYY.MM.DD.ddd"
+}
