@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: ko-KR
   baseUrl: borahong.github.io/blog
   ignorePatterns:
     - private
@@ -16,8 +16,15 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: "Gowun Dodum"
-      body: "Gowun Dodum"
+      header:
+        name: "Noto Sans KR"
+        weights:
+          - 400
+          - 700
+      body:
+        name: "Gowun Dodum"
+        weights:
+          - 400
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -126,7 +133,7 @@ plugins:
   - source: github:quartz-community/og-image
     enabled: true
   - source: github:quartz-community/cname
-    enabled: true
+    enabled: false
   - source: github:quartz-community/canvas-page
     enabled: true
   - source: github:quartz-community/content-page
@@ -195,6 +202,8 @@ plugins:
       group: toolbar
   - source: github:quartz-community/breadcrumbs
     enabled: true
+    options:
+      rootName: 홈
     layout:
       position: beforeBody
       priority: 5
@@ -214,7 +223,7 @@ plugins:
         inputPosition: bottom
         lightTheme: light
         darkTheme: dark
-        lang: en
+        lang: ko
     layout:
       position: afterBody
       priority: 10
@@ -227,7 +236,7 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      title: Recent Notes
+      title: 최근 게시글
       limit: 5
       linkToMore: false
       showTags: false
