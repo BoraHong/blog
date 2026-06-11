@@ -4,6 +4,11 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
+if [[ -f "$repo_root/.mobile-diary-sync-disabled" ]]; then
+  echo "Mobile diary sync is OFF. Run scripts/enable-mobile-diary-sync.sh to turn it back on."
+  exit 0
+fi
+
 current_branch="$(git rev-parse --abbrev-ref HEAD)"
 
 git pull --rebase --autostash origin "$current_branch"
