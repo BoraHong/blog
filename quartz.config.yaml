@@ -178,6 +178,14 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
+  - source: ./quartz/plugins/custom/diary-calendar
+    enabled: true
+    options:
+      folder: Diary
+      title: 일기 달력
+    layout:
+      position: afterBody
+      priority: 5
   - source: github:quartz-community/tag-list
     enabled: false
     layout:

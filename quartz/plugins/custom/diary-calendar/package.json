@@ -1,0 +1,30 @@
+{
+  "name": "diary-calendar",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components/index.js"
+  },
+  "quartz": {
+    "name": "diary-calendar",
+    "displayName": "Diary Calendar",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": false,
+    "defaultOptions": {
+      "folder": "Diary",
+      "title": "일기 달력"
+    },
+    "components": {
+      "DiaryCalendar": {
+        "displayName": "Diary Calendar",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 5
+      }
+    }
+  }
+}
