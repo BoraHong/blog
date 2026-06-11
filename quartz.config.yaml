@@ -17,14 +17,14 @@ configuration:
     cdnCaching: true
     typography:
       header:
-        name: "Noto Sans KR"
+        name: "Gowun Dodum"
         weights:
           - 400
-          - 700
       body:
         name: "Gowun Dodum"
         weights:
           - 400
+        includeItalic: false
       code: IBM Plex Mono
     colors:
       lightMode:
