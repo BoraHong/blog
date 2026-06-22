@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: ko-KR
-  baseUrl: borahong.github.io/blog
+  baseUrl: hongsigk.github.io/blog
   ignorePatterns:
     - private
     - templates
@@ -221,7 +221,7 @@ plugins:
     options:
       provider: giscus
       options:
-        repo: BoraHong/blog
+        repo: hongsigk/blog
         repoId: R_kgDOSwr-Og
         category: Announcements
         categoryId: DIC_kwDOSwr-Os4C-e80
