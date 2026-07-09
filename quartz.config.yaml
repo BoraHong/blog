@@ -225,7 +225,7 @@ plugins:
         repoId: R_kgDOSwr-Og
         category: Announcements
         categoryId: DIC_kwDOSwr-Os4C-e80
-        mapping: url
+        mapping: url  
         strict: true
         reactionsEnabled: true
         inputPosition: bottom

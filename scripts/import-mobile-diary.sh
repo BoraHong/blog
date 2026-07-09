@@ -14,6 +14,11 @@ copied=0
 unchanged=0
 skipped=0
 
+file_signature() {
+  local path="$1"
+  stat -f '%m %z %Lp' "$path"
+}
+
 while IFS= read -r -d '' source_file; do
   filename="$(basename "$source_file")"
 
@@ -25,14 +30,22 @@ while IFS= read -r -d '' source_file; do
 
     mkdir -p "$dest_dir"
 
-    if [[ -f "$dest_file" ]] && cmp -s "$source_file" "$dest_file"; then
-      echo "unchanged: $filename -> ${year}_${month}/"
-      unchanged=$((unchanged + 1))
-    else
+    if [[ -f "$dest_file" ]]; then
+      source_signature="$(file_signature "$source_file")"
+      dest_signature="$(file_signature "$dest_file")"
+
+      if [[ "$source_signature" == "$dest_signature" ]] && cmp -s "$source_file" "$dest_file"; then
+        echo "unchanged: $filename -> ${year}_${month}/"
+        unchanged=$((unchanged + 1))
+        continue
+      fi
+    fi
+
+    {
       cp -p "$source_file" "$dest_file"
       echo "copied:   $filename -> ${year}_${month}/"
       copied=$((copied + 1))
-    fi
+    }
   else
     echo "skipped:  $filename"
     skipped=$((skipped + 1))
